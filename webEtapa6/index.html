@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de HTML y CSS con Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="bg-dark text-white text-center p-3">
+        <h1>Tutorial de HTML y CSS con Bootstrap</h1>
+        <!-- Barra de Navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="#tema1">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tema2">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tema3">Estilos con Bootstrap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container  container-scrollable full-width">
+
+
+
+        <section id="tema1" class="mb-4">
+            <h2><i class="fas fa-code fa-xs"></i> HTML Básico</h2>
+            <p class="lead">En esta sección, exploraremos los conceptos fundamentales del lenguaje HTML.</p>
+
+            <h3><i class="fas fa-tags fa-xs"></i> Etiquetas HTML</h3>
+            <p>HTML utiliza etiquetas para estructurar y dar formato al contenido de una página web. Aquí tienes algunas etiquetas esenciales:</p>
+            <ul>
+                <li><code>&lt;html&gt;</code>: Define el documento HTML.</li>
+                <li><code>&lt;head&gt;</code>: Contiene información sobre el documento, como el título y enlaces a estilos.
+                </li>
+                <li><code>&lt;body&gt;</code>: Contiene el contenido principal de la página.</li>
+                <li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>: Encabezados de diferentes niveles.
+                </li>
+                <li><code>&lt;p&gt;</code>: Define un párrafo de texto.</li>
+
+            </ul>
+
+            <h3><i class="fas fa-list-ul fa-xs"></i> Listas</h3>
+            <p>Las listas son una parte importante de HTML:</p>
+            <ul>
+                <li><code>&lt;ul&gt;</code>: Lista no ordenada.</li>
+                <li><code>&lt;ol&gt;</code>: Lista ordenada.</li>
+                <li><code>&lt;li&gt;</code>: Elemento de lista.</li>
+            </ul>
+
+            <h3><i class="fas fa-link fa-xs"></i> Enlaces</h3>
+            <p>Los enlaces permiten la navegación entre páginas. Aquí está la etiqueta básica:</p>
+            <p><code>&lt;a href="url"&gt;Texto del enlace&lt;/a&gt;</code></p>
+
+            <h3><i class="fas fa-image fa-xs"></i> Imágenes</h3>
+            <p>Para agregar imágenes a tu página, utiliza la etiqueta <code>&lt;img&gt;</code>:</p>
+            <p><code>&lt;img src="ruta-de-la-imagen" alt="Descripción de la imagen"&gt;</code></p>
+
+
+        </section>
+
+
+
+        <section id="tema2" class="mb-4" style="display:none;">
+            <h2><i class="fas fa-paint-brush fa-xs"></i> CSS: Estilizando tu Página</h2>
+            <p class="lead">En esta sección, exploraremos cómo dar estilo y diseño a tu página web mediante CSS.</p>
+
+            <h3><i class="fas fa-paint-roller fa-xs"></i> ¿Qué es CSS?</h3>
+            <p>CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo que describe la presentación de un documento HTML. Con CSS, puedes controlar el diseño, los colores, las fuentes y otros aspectos visuales de tu página.</p>
+
+            <h3><i class="fas fa-palette fa-xs"></i> Selección de Elementos</h3>
+            <p>Para aplicar estilos, primero seleccionamos los elementos HTML. Puedes seleccionar por etiquetas, clases o identificadores:</p>
+            <pre><code>body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }</code></pre>
+            <pre><code>.destacado {
+            color: #ff6600;
+            font-weight: bold;
+        }</code></pre>
+
+            <h3><i class="fas fa-cogs fa-xs"></i> Propiedades y Valores</h3>
+            <p>Cada estilo en CSS se compone de propiedades y valores. Por ejemplo, <code>color: #333;</code>, donde
+                <code>color</code> es la propiedad y <code>#333</code> es el valor.</p>
+
+            <h3><i class="fas fa-code fa-xs"></i> Box Model</h3>
+            <p>El modelo de caja en CSS describe cómo se representan y organizan los elementos en la página. Incluye propiedades como <code>margin</code>, <code>padding</code>, <code>border</code>, etc.</p>
+
+            <h3><i class="fas fa-images fa-xs"></i> Imágenes y Fondos</h3>
+            <p>Controla la presentación de imágenes y fondos con propiedades como <code>background-image</code> y
+                <code>border-radius</code>.</p>
+
+        </section>
+
+
+
+
+
+
+        <section id="tema3" class="mb-4" style="display:none;">
+            <h2><i class="fab fa-bootstrap fa-xs"></i> Estilizando con Bootstrap</h2>
+            <p class="lead">Descubre cómo utilizar Bootstrap para darle un aspecto moderno y responsivo a tu página web.
+            </p>
+
+            <h3><i class="fas fa-mouse-pointer fa-xs"></i> Botones Bootstrap</h3>
+            <p>Bootstrap proporciona una variedad de estilos predefinidos para botones. Puedes utilizar clases como
+                <code>btn btn-primary</code> para resaltar un botón o <code>btn btn-outline-dark</code> para un estilo de contorno.</p>
+
+            <pre><code>&lt;button type="button" class="btn btn-primary"&gt;Botón Principal&lt;/button&gt;</code></pre>
+
+            <h3><i class="fas fa-bars fa-xs"></i> Barra de Navegación</h3>
+            <p>La barra de navegación de Bootstrap facilita la creación de menús de navegación elegantes y responsivos. Puedes usar la clase <code>navbar</code> para comenzar.</p>
+
+            <pre><code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+            &lt;a class="navbar-brand" href="#"&gt;Logo&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav"&gt;
+                    &lt;li class="nav-item active"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Inicio &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Acerca de&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;
+                        &lt;a class="nav-link" href="#"&gt;Servicios&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;</code></pre>
+
+            <h3><i class="fas fa-columns fa-xs"></i> Grid System</h3>
+            <p>Bootstrap utiliza un sistema de cuadrícula (grid) para ayudarte a diseñar el diseño de tu página de manera fácil y efectiva.</p>
+
+
+        </section>
+
+
+
+
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2023 Tutorial de HTML y CSS con Bootstrap #by Angel</p>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Añade un listener de clic a cada enlace de la nav
+            document.querySelectorAll('.nav-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Oculta todas las secciones
+                    document.querySelectorAll('section').forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+
+                    // Muestra solo la sección correspondiente al enlace clicado
+                    var targetId = this.getAttribute('href').substring(1); // Elimina el '#'
+                    document.getElementById(targetId).style.display = 'block';
+
+                    // Remueve la clase 'active' de todos los enlaces
+                    document.querySelectorAll('.nav-link').forEach(function(navLink) {
+                        navLink.classList.remove('active');
+                    });
+
+                    // Agrega la clase 'active' al enlace clicado
+                    this.classList.add('active');
+                });
+            });
+        });
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir la presentación del formulario por defecto
+            submitForm();
+        });
+
+        function submitForm() {
+            var username = document.getElementById('inputUsername').value;
+            var password = document.getElementById('inputPassword').value;
+            var rememberMe = document.getElementById('rememberMe').checked;
+
+            var errorMessage = document.getElementById('errorMessage');
+            var successMessage = document.getElementById('successMessage');
+
+            if (!username || !password) {
+                errorMessage.innerText = 'Por favor, complete todos los campos.';
+                successMessage.innerText = '';
+                return;
+            }
+
+            errorMessage.innerText = '';
+            successMessage.innerText = 'Inicio de sesión exitoso. Redirigiendo...';
+
+            // Aquí puedes agregar código para manejar la opción "Recuérdame" (rememberMe)
+            if (rememberMe) {
+                // Guarda el estado de "Recuérdame" (puedes usar localStorage, cookies, etc.)
+                console.log('Recuérdame activado');
+            }
+
+            setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 2000);
+        }
+
+
+
+        function checkAndFocus(event, nextElementId) {
+            var currentElement = event.target;
+            var errorMessage = document.getElementById('errorMessage');
+            var successMessage = document.getElementById('successMessage');
+
+            if (event.key === 'Enter') {
+                if (!currentElement.value.trim()) {
+                    errorMessage.innerText = 'Por favor, complete todos los campos.';
+                    successMessage.innerText = '';
+                    event.preventDefault();
+                    return;
+                }
+
+                errorMessage.innerText = '';
+                successMessage.innerText = '';
+
+                document.getElementById(nextElementId).focus();
+                event.preventDefault();
+            }
+        }
+
+        function checkAndSubmit(event, currentElementId, buttonId) {
+            var currentElement = event.target;
+            var errorMessage = document.getElementById('errorMessage');
+            var successMessage = document.getElementById('successMessage');
+
+            if (event.key === 'Enter') {
+                if (!currentElement.value.trim()) {
+                    errorMessage.innerText = 'Por favor, complete todos los campos.';
+                    successMessage.innerText = '';
+                    event.preventDefault();
+                    return;
+                }
+
+                errorMessage.innerText = '';
+                successMessage.innerText = '';
+
+                // Activar el botón de inicio de sesión
+                document.getElementById('loginButton').click(); // Cambié buttonId por 'loginButton'
+            }
+        }
+
+        function toggleCheckbox() {
+            var checkbox = document.getElementById('rememberMe');
+            var checkmarkIcon = document.querySelector('.checkmark i');
+            var rememberText = document.getElementById('rememberText');
+
+            checkbox.checked = !checkbox.checked;
+
+            checkbox.checked ? checkmarkIcon.classList.add('checked') : checkmarkIcon.classList.remove('checked');
+
+            // Actualiza el ícono de FontAwesome según el estado del checkbox
+            checkmarkIcon.innerHTML = checkbox.checked ? '<i class="fa-solid fa-square-check"></i>' : '<i class="fa-solid fa-square"></i>';
+
+            rememberText.innerText = checkbox.checked ? 'Recuérdame' : 'No recuérdame';
+
+            var event = new Event('change', {
+                bubbles: true,
+                cancelable: false
+            });
+            checkbox.dispatchEvent(event);
+        }
+    </script>
+
+</body>
+
+</html>

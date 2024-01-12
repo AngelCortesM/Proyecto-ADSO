@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="Css/styleIndex.css">
+
+
+</head>
+
+<body class="login-container">
+    <div class="login-wrapper">
+        <div class="header-section">
+            <p class="login-title">Inicio de Sesión</p>
+        </div>
+
+        <div class="content-section">
+            <img src="Imagenes/2.png" alt class="watermark-image">
+
+            <div class="login-row">
+                <form id="loginForm" class="col s12 login-form">
+                    <div class="row">
+                        <!-- Campos de usuario y contraseña -->
+                        <div class="input-field col">
+                            <input id="inputUsername" type="email" class="form-input" onkeydown="checkAndFocus(event, 'inputPassword');">
+                            <label for="inputUsername"><i class="fas fa-fingerprint"></i> Usuario</label>
+                        </div>
+                        <div class="input-field col">
+                            <input id="inputPassword" type="password" class="form-input" onkeydown="checkAndSubmit(event, 'inputPassword');">
+                            <label for="inputPassword"><i class="fas fa-lock"></i> Contraseña</label>
+                        </div>
+                    </div>
+
+                    <!-- Mensajes de error y éxito -->
+                    <div id="errorMessage" style="color: red;"></div>
+                    <div id="successMessage" style="color: green;"></div>
+                </form>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="rememberMe" style="cursor: pointer;" onclick="toggleCheckbox()">
+                            <input type="checkbox" id="rememberMe" style="position: absolute; opacity: 0;" />
+
+                            <span class="checkmark"><i class="fas fa-square"></i></span>
+                            <span id="rememberText">Recuérdame</span>
+                        </label>
+
+                    </div>
+                    <div class="input-field col s6">
+                        <a href="registrouser.html" style="display: flex; align-items: center;">
+                            <i class="fas fa-user-plus"></i> Regístrate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <!-- Botón de inicio de sesión -->
+            <button class="login-button" id="loginButton" onclick="submitForm()">Login</button>
+        </div>
+    </div>
+
+
+
+    <script src="Js/materialize.min.js"></script>
+    <script src="Js/index.js"></script>
+</body>
+
+</html>

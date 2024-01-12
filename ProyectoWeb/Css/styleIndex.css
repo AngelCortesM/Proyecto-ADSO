@@ -1,0 +1,230 @@
+body {
+    background-color: #ffffff;
+    color: #fff;
+    margin: 0;
+    /* Añadido para corregir el espacio adicional en la parte superior */
+}
+
+.input-field.col.s6 {
+    margin-bottom: 50px;
+}
+
+.input-field.col.s6 a {
+    margin: 0 10px;
+}
+
+.login-container {
+    margin-top: 10vh;
+    max-height: 70vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.login-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section,
+.footer-section {
+    width: 60%;
+    border: 0px solid #333;
+    background: rgba(60, 60, 60, 0.50);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.header-section {
+    height: 56px;
+    border-radius: 27px 27px 0px 0px;
+}
+
+.footer-section {
+    height: 60px;
+    border-radius: 0px 0px 27px 27px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(70vh + 56px);
+}
+
+.login-title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.content-section {
+    width: 80%;
+    height: 70vh;
+    border-radius: 24px;
+    border: 0px solid #333;
+    background: #555;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+    margin-bottom: 0;
+}
+
+.watermark-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(100%);
+    opacity: 0.1;
+    max-width: 99%;
+    max-height: 99%;
+}
+
+.login-form {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 0px solid #666;
+    border-radius: 25px;
+    margin-bottom: 0;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    color: #fff;
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.form-input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+.form-input:focus+label {
+    color: #2196F3;
+}
+
+.login-button {
+    width: 110px;
+    height: 40px;
+    margin-top: 3mm;
+    border-radius: 15px;
+    border: 0px solid #666;
+    background: #555;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-family: "Rounded Mplus 1c Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.remember-me-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkmark i {
+    display: inline-block;
+    font-size: 16px;
+    /* Ajusta según sea necesario */
+}
+
+.checkmark i.checked::before {
+    content: '\f0c8';
+    /* Unicode del ícono FontAwesome para "check-square" */
+    font-family: 'Font Awesome 6 Solid';
+    /* Utiliza 'Font Awesome 6 Solid' para el conjunto Solid */
+}
+
+.checkmark i:not(.checked)::before {
+    content: '\f14a';
+    /* Unicode del ícono FontAwesome para "square" */
+    font-family: 'Font Awesome 6 Solid';
+    /* Utiliza 'Font Awesome 6 Solid' para el conjunto Solid */
+}
+
+.login-button:hover {
+    background: #888;
+    color: #333;
+    transform: scale(1.05);
+}
+
+.remember-me-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-row .input-field.col {
+    width: 100%;
+}
+
+.login-row .input-field.col a {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        margin-top: 5vh;
+    }
+    .login-row {
+        gap: 10px;
+    }
+    .input-field {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .login-form .row,
+    .login-row>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-row>div>a {
+        margin: 10px 0;
+    }
+    .footer-section {
+        width: 80%;
+        height: 60px;
+        top: calc(70vh + 36px);
+    }
+}

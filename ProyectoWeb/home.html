@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+
+    <link rel="stylesheet" href="Css/style.css">
+    <style>
+        /* Estilo para asegurarse de que la barra de navegación ocupe toda la altura de la página */
+    </style>
+</head>
+
+<body class="body1">
+
+
+
+    <ul id="slide-out" class="sidenav customside">
+
+
+
+
+
+
+        <div class="custom-menu fontmenu ">
+            <ul class="collection with-header ">
+                <li class="collection-header ">
+                    <h5 class="center-align fontboton">Home</h5>
+                </li>
+                <div class="fondlogo center-align">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="collection-item color ">Inicio</a>
+                    <a href="compras.html" class="collection-item color">Compras</a>
+                    <a href="articulos.html" class="collection-item color">Articulos</a>
+                    <a href="sedes.html" class="collection-item color">Sedes</a>
+                    <a href="proveedores.html" class="collection-item color">Proveedores</a>
+                    <a href="registrouser.html" class="collection-item color">Usuarios</a>
+                    <a href="informes.html" class="collection-item color">Informes</a>
+                    <a href="quienessomos.html" class="collection-item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+
+
+
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger iconmenu">
+        <i class="fa-solid fa-bars">MENU</i>
+    </a>
+
+    <div class="containerart">
+        <div class="divheader">
+            <p class="titleart">Home</p>
+        </div>
+        <div class="divcontent">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="custom-row">
+
+                <header>
+                    <h2>Mensaje de Hybrid Business Solutions</h2>
+                </header>
+                <section class="motivational-message">
+                    <p>En HBS, creemos en el poder transformador de la acción, en la capacidad de generar un impacto positivo en el mundo. Día a día, dedicamos nuestro esfuerzo incansable a la construcción de un futuro mejor para todos, reconociendo que
+                        tú eres una parte esencial de este viaje.</p>
+
+                    <p>Recuerda que cada pequeño paso que tomas, cada elección que haces, tiene el potencial de marcar una gran diferencia. Al unirte a nosotros, no solo te beneficias de nuestros módulos eficientes y ahorras dinero, sino que también te conviertes
+                        en un agente de cambio.</p>
+
+                    <p>Juntos, estamos forjando una hermosa historia de compromiso con el medio ambiente y la sostenibilidad. Tu participación en esta misión es un recordatorio palpable de que cada individuo tiene el poder de contribuir a un mundo más limpio
+                        y saludable.</p>
+
+                    <p>No subestimes el impacto de tus acciones. ¡Sé la inspiración que el mundo necesita! En HBS, estamos aquí para respaldarte en cada paso de tu viaje. Sigamos trabajando juntos hacia un futuro más luminoso.</p>
+
+                    <p>¡Agradecemos tu participación en HBS y por ser una fuente de inspiración para un mundo mejor!</p>
+                    <br>
+                    <br>
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="divfooter">
+            <a href="http://127.0.0.1:5500/home.html"> <button class="botonhbs">Registrar</button></a>
+        </div>
+    </div>
+
+    <div>
+        <footer>
+            <div>
+                <img class="logofooter" src="Imagenes/2.png" alt="">
+            </div>
+            <div>
+                <h4>&copy; 2023 HBS Todos los derechos reservados</h4>
+
+                <p>
+                    <a href="home.html">Inicio</a>
+                    <a href="#">Acerca de</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Contacto</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="Js/materialize.min.js"></script>
+
+
+    <!-- Inicializar el componente de la colección para el menú vertical -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+
+
+
+        // Manejar el evento de tecla "Enter"
+        document.addEventListener('keydown', function(event) {
+            handleEnter(event);
+        });
+
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                // Enfocar en el siguiente campo de entrada
+                focusNextInput(event.target);
+            }
+        }
+
+        // Función para enfocar en el siguiente campo de entrada
+        function focusNextInput(currentInput) {
+            var form = currentInput.form;
+            var index = Array.prototype.indexOf.call(form, currentInput);
+            var nextInput = form.elements[index + 1];
+
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+
+        // Función para manejar el clic en el enlace "Registrar"
+        function registrar() {
+            // Aquí puedes poner la lógica para manejar el clic en el enlace "Registrar"
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <!-- Especifica la codificación del documento -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Configura la vista en dispositivos móviles -->
+    <title>HBS</title>
+    <!-- Título del documento -->
+    <!-- Icono para la pestaña del navegador -->
+    <link rel="icon" href="Imagenes/2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagenes/2.png" type="image/x-icon">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <!-- Incluye FontAwesome para íconos -->
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <!-- Incluye el estilo de Materialize para diseño -->
+    <link rel="stylesheet" href="Css/index.css">
+    <!-- Estilos en línea -->
+
+</head>
+
+<body class="bodyindex">
+    <!-- Contenedor principal -->
+    <div class="containerart">
+        <!-- Encabezado -->
+        <div class="divheader">
+            <p class="titleart">Inicio de Sesión</p>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="divcontent divcontentindex">
+            <img src="Imagenes/2.png" alt class="watermark">
+
+            <!-- Fila personalizada -->
+            <div class="custom-row">
+
+                <!-- Formulario de inicio de sesión -->
+                <form id="loginForm" class="custom-col s12 customhbs-formhbs">
+                    <div id="errorMessage"></div>
+                    <div id="successMessage"></div>
+                    <!-- Fila interna del formulario -->
+                    <div class="row">
+                        <!-- Campo de entrada para el nombre de usuario -->
+                        <div class="input-field custom-col s4">
+                            <input id="inputUsername" name="username" type="email" class="customhbs-input" onkeydown="checkAndFocus(event, 'inputPassword')">
+                            <label for="inputUsername" class="label-icon">Usuario<i
+                                    class="fa-solid fa-fingerprint"></i></label>
+                        </div>
+
+                        <!-- Campo de entrada para la contraseña -->
+                        <div class="input-field custom-col s4">
+                            <input id="inputPassword" name="password" type="password" class="customhbs-input" onkeydown="checkAndSubmit(event, 'inputPassword', 'loginButton')">
+                            <label for="inputPassword" class="label-icon">Contraseña<i
+                                    class="fa-solid fa-lock"></i></label>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Sección adicional con enlaces y mensajes -->
+                <div class="divup">
+                    <a href="#">
+                        <i class="fa-solid fa-square-check remember-icon"></i>
+                        <input id="rememberMe" type="checkbox" onchange="toggleCheckbox()"> Recuérdame
+
+                    </a>
+
+                    <a href="registrouser.html">
+                        <i class="fa-solid fa-lock-open forgot-password-icon"></i> Olvidé mi contraseña
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="divfooter">
+            <a href="home.html"> <button id="loginButton" class="botonhbs" onclick="submitForm()">Login</button></a>
+        </div>
+    </div>
+
+    <!-- Script de Materialize -->
+    <script src="Js/materialize.min.js"></script>
+    <script src="Js/index.js"></script>
+    <!-- Script personalizado para el formulario de inicio de sesión -->
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+
+
+
+    <!--load all styles -->
+    <link rel="stylesheet" href="Css/style.css">
+
+    <style>
+        /* Estilo para asegurarse de que la barra de navegación ocupe toda la altura de la página */
+    </style>
+</head>
+
+<body>
+
+    <ul id="slide-out" class="sidenav customside">
+        <div class="custom-menu fontmenu">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h5 class="fontboton">Home</h5>
+                </li>
+                <div class="fondlogo ">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="collection-item color">Inicio</a>
+                    <a href="compras.html" class="collection-item color">Compras</a>
+                    <a href="articulos.html" class="collection-item color">Articulos</a>
+                    <a href="sedes.html" class="collection-item color">Sedes</a>
+                    <a href="proveedores.html" class="collection-item color">Proveedores</a>
+                    <a href="registrouser.html" class="collection-item color">Usuarios</a>
+                    <a href="informes.html" class="collection-item color">Informes</a>
+                    <a href="quienessomos.html" class="collection-item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+    </ul>
+
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger iconmenu">
+        <i class="fa-solid fa-bars">MENU</i>
+    </a>
+
+    <div class="containerart">
+        <div class="divheader">
+            <p class="titleart">Registro de Articulos</p>
+        </div>
+        <div class="divcontent">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="custom-row center-align">
+                <form class="custom-col s12 customhbs-formhbs center-align">
+                    <div class="row center-align">
+                        <div class="input-field custom-col s12">
+                            <input id="input1" type="number" class="customhbs-input">
+                            <label for="input1"><i class="fa-solid fa-fingerprint ">   </i> Id</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input2" type="text" class="customhbs-input">
+                            <label for="input2"><i class="fa-solid fa-newspaper">   </i> Nombre</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input3" type="number" class="customhbs-input">
+                            <label for="input3"><i class="fa-solid fa-barcode">   </i> Barras</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input4" type="text" class="customhbs-input">
+                            <label for="input4"><i class="fa-solid fa-signature"></i>Alias</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input5" type="number" class="customhbs-input">
+                            <label for="input5"><i class="fa-solid fa-certificate"></i>Marca</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input6" type="number" class="customhbs-input">
+                            <label for="input6"><i class="fa-solid fa-box"></i>Contenido</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input7" type="text" class="customhbs-input">
+                            <label for="input7"><i class="fa-solid fa-layer-group"></i>Tipo</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input8" type="number" class="customhbs-input">
+                            <label for="input8"><i class="fa-solid fa-dollar-sign"></i>Costo</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input9" type="number" class="customhbs-input">
+                            <label for="input9"><i class="fa-solid fa-dollar-sign"></i>IVA</label>
+                        </div>
+
+                        <div class="input-field custom-col s12">
+                            <input id="input10" type="number" class="customhbs-input">
+                            <label for="input10"><i class="fa-solid fa-dollar-sign"></i>Precio</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="divfooter">
+            <a href="#"> <button id="botonRegistrar" class="botonhbs">Registrar</button></a>
+
+            <a class="botonhbs modal-trigger" href="#modalConsultaCompras">Consultar Articulos</a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="modalConsultaCompras" class="modal">
+        <div class="modal-content custom-modal-inner">
+            <!-- Contenido del modal -->
+            <h4 class="modal-title">Porveedores Registrados</h4>
+            <div class="modal-content">
+                <div class="row center-align">
+                    <!-- Tabla donde se mostrarán las compras -->
+                    <table class="striped responsive-table table-white-text" id="tablaCompras">
+                        <thead>
+                            <tr>
+                                <th><i class="fa-solid fa-fingerprint prefix white-icon small-icon"></i> Id</th>
+                                <th><i class="fa-solid fa-newspaper prefix white-icon small-icon"></i> Nombre</th>
+                                <th><i class="fa-solid fa-barcode prefix white-icon small-icon"></i> Barras</th>
+                                <th><i class="fa-solid fa-signature prefix white-icon small-icon"></i> Alias</th>
+                                <th><i class="fa-solid fa-certificate prefix white-icon small-icon"></i> Marca</th>
+                                <th><i class="fa-solid fa-box prefix white-icon small-icon"></i> Contenido</th>
+                                <th><i class="fa-solid fa-layer-group prefix white-icon small-icon"></i> Tipo</th>
+                                <th><i class="fa-solid fa-dollar-sign prefix white-icon small-icon"></i> Costo</th>
+                                <th><i class="fa-solid fa-dollar-sign prefix white-icon small-icon"></i> IVA</th>
+                                <th><i class="fa-solid fa-dollar-sign prefix white-icon small-icon"></i> Precio</th>
+                                <!-- Agrega más columnas según tus campos -->
+                            </tr>
+                        </thead>
+                        <tbody id="tablaComprasBody">
+                            <!-- Aquí se agregarán las filas de la tabla dinámicamente con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="botonhbs">
+                <!-- Enlace en el modal para exportar a Excel -->
+                <a href="#!" onclick="exportar('excel')">Exportar a Excel</a>
+                <a href="#!" onclick="exportar('txt')">Exportar a TXT</a>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="Js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tableexport@5.0.1/dist/js/tableexport.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+    <!-- Inicializar el componente de la colección para el menú vertical -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+
+            var sidenavElems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavElems);
+
+            var modalElems = document.querySelectorAll('.modal');
+            M.Modal.init(modalElems);
+            // Initialize TableExport
+            var table = document.getElementById('tablaCompras');
+            var exportador = new TableExport(table, {
+                formats: ['xls'],
+                exportButtons: false,
+            });
+
+            // Set up event listener for export button
+            var btnExportar = document.getElementById('btnExportar');
+            if (btnExportar) {
+                btnExportar.addEventListener('click', function() {
+                    exportador.export2file('excel', 'ExportedData', 'xlsx');
+                });
+            }
+        });
+
+        function openModal() {
+            var modal = M.Modal.getInstance(document.getElementById('modalArticulos'));
+            modal.open();
+        }
+
+        document.addEventListener('keydown', function(event) {
+            handleEnter(event);
+        });
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                focusNextInput(event.target);
+            }
+        }
+
+        function focusNextInput(currentInput) {
+            var form = currentInput.form;
+            var index = Array.prototype.indexOf.call(form, currentInput);
+            var nextInput = form.elements[index + 1];
+
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+
+        // Función para manejar el clic en el enlace "Registrar"
+
+
+
+
+        function registrarCompra() {
+            const inputFields = document.querySelectorAll('.customhbs-input');
+            inputFields.forEach(function(input) {
+                console.log(input.id + ':', input.value);
+            });
+            // Agrega aquí la lógica para manejar la información de la compra
+        }
+
+
+
+        // consultar compras
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+
+            document.getElementById('modalConsultaCompras').addEventListener('click', function() {
+                cargarDatosCompras();
+            });
+        });
+
+
+        // Función para cargar datos de compras en la tabla
+
+
+        //datos simuladosconst datos = [
+        const datos = [{
+                id: 1,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "123456789",
+                nombre: "Juan",
+                apellido: "Pérez",
+                razonSocial: "Empresa ABC",
+                direccion: "Calle 123",
+                ciudad: "Bogotá",
+                telefono: "123456789",
+                email: "juan@example.com",
+            }, {
+                id: 2,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "890123456",
+                nombre: "María",
+                apellido: "Gómez",
+                razonSocial: "Tienda XYZ",
+                direccion: "Avenida Principal",
+                ciudad: "Medellín",
+                telefono: "987654321",
+                email: "maria@example.com",
+            }, {
+                id: 3,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "567890123",
+                nombre: "Carlos",
+                apellido: "Ruiz",
+                razonSocial: "Supermercado S.A.",
+                direccion: "Plaza Central",
+                ciudad: "Cali",
+                telefono: "456789012",
+                email: "carlos@example.com",
+            }, {
+                id: 4,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "234567890",
+                nombre: "Carlos",
+                apellido: "Ruiz",
+                razonSocial: "Droguería XYZ",
+                direccion: "Carrera Medicamentos",
+                ciudad: "Cali",
+                telefono: "456789012",
+                email: "carlos@example.com",
+            }, {
+                id: 5,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "567890123",
+                nombre: "Sofía",
+                apellido: "Ramírez",
+                razonSocial: "Tienda de Ropa S.A.",
+                direccion: "Avenida Moda",
+                ciudad: "Medellín",
+                telefono: "567890123",
+                email: "sofia@example.com",
+            }, {
+                id: 6,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "678901234",
+                nombre: "Roberto",
+                apellido: "Pérez",
+                razonSocial: "Ferretería del Barrio",
+                direccion: "Calle Herramientas",
+                ciudad: "Bogotá",
+                telefono: "678901234",
+                email: "roberto@example.com",
+            }, {
+                id: 7,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "789012345",
+                nombre: "Sofía",
+                apellido: "Ramírez",
+                razonSocial: "Papelería ABC Ltda.",
+                direccion: "Carrera Papel",
+                ciudad: "Barranquilla",
+                telefono: "789012345",
+                email: "sofia@example.com",
+            }, {
+                id: 8,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "890123456",
+                nombre: "Eduardo",
+                apellido: "Castro",
+                razonSocial: "Librería Libros Rápidos",
+                direccion: "Calle Lectura",
+                ciudad: "Santa Marta",
+                telefono: "890123456",
+                email: "eduardo@example.com",
+            }, {
+                id: 9,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "901234567",
+                nombre: "Lucía",
+                apellido: "Gómez",
+                razonSocial: "Droguería Salud S.A.",
+                direccion: "Carrera Medicamentos",
+                ciudad: "Cali",
+                telefono: "901234567",
+                email: "lucia@example.com",
+            }, {
+                id: 10,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "123456789",
+                nombre: "Eduardo",
+                apellido: "Castro",
+                razonSocial: "Supermercado Alimenta Bien",
+                direccion: "Avenida Alimentos",
+                ciudad: "Medellín",
+                telefono: "123456789",
+                email: "eduardo@example.com",
+            }, {
+                id: 11,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "345678901",
+                nombre: "Ana",
+                apellido: "Martínez",
+                razonSocial: "Distribuidora XYZ",
+                direccion: "Carrera 456",
+                ciudad: "Cartagena",
+                telefono: "345678901",
+                email: "ana@example.com",
+            }, {
+                id: 12,
+                tipoIdentificacion: "Cédula",
+                numeroDocumento: "012345678",
+                nombre: "José",
+                apellido: "Rodríguez",
+                razonSocial: "Ferretería ABC",
+                direccion: "Avenida Secundaria",
+                ciudad: "Barranquilla",
+                telefono: "234567890",
+                email: "jose@example.com",
+            }, {
+                id: 13,
+                tipoIdentificacion: "NIT",
+                numeroDocumento: "789012345",
+                nombre: "Laura",
+                apellido: "Gutiérrez",
+                razonSocial: "Librería S.A.",
+                direccion: "Calle Libros",
+                ciudad: "Santa Marta",
+                telefono: "567890123",
+                email: "laura@example.com",
+            },
+            // Puedes agregar más objetos de datos según sea necesario
+        ];
+        const tbody = document.querySelector("#tablaComprasBody");
+
+        for (const dato of datos) {
+            const fila = document.createElement("tr");
+
+            for (const key of Object.keys(dato)) {
+                const celda = document.createElement("td");
+                celda.textContent = dato[key];
+                celda.style.fontSize = "12px";
+                fila.appendChild(celda);
+            }
+
+            tbody.appendChild(fila);
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+        });
+
+        function cargarDatosCompras() {
+            // ... Código para cargar datos ...
+            document.getElementById('btnExportar').addEventListener('click', function() {
+                exportar('excel');
+            });
+            var btnExportar = document.getElementById('btnExportar');
+            if (btnExportar) {
+                btnExportar.addEventListener('click', function() {
+                    exportar('excel');
+                });
+            }
+        }
+
+
+
+
+
+
+
+        // Función para exportar la tabla a Excel y PDF
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the modal
+            var modalConsultaCompras = M.Modal.init(document.getElementById('modalConsultaCompras'));
+
+            // Add an event listener to the modal to load data when opened
+            modalConsultaCompras.el.addEventListener('click', function() {
+                cargarDatosCompras();
+            });
+
+            // Add an event listener to the export button
+            var btnExportar = document.getElementById('btnExportar');
+            if (btnExportar) {
+                btnExportar.addEventListener('click', function() {
+                    exportar('excel');
+                });
+            }
+        });
+
+        function cargarDatosCompras() {
+            // ... Código para cargar datos ...
+        }
+
+        // Función para exportar la tabla a Excel y PDF
+        function exportar(formato) {
+            var table = document.getElementById('tablaCompras');
+            var exportador = new TableExport(table, {
+                formats: formato === 'excel' ? ['xls'] : ['txt'],
+                exportButtons: false,
+            });
+
+            var datos = exportador.getExportData()[table.id];
+
+            if (datos && datos[formato]) {
+                var datosFormato = datos[formato];
+                exportador.export2file(datosFormato.data, datosFormato.mimeType, datosFormato.filename, datosFormato.fileExtension);
+            } else {
+                console.error('No se pudieron obtener los datos de exportación.');
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

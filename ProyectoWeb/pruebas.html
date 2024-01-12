@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="Css/style.css">
+    <style>
+        body {
+            color: #ffffff;
+            margin: 0;
+            /* Elimina la propiedad overflow: hidden; */
+        }
+        
+        .custom-menu,
+        .customside {
+            width: 100%;
+            max-width: 170px;
+            border-radius: 4px;
+            height: 100vh;
+            background: #4d4d4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            overflow-y: auto;
+            /* Agrega esta línea para permitir el desplazamiento vertical */
+        }
+        
+        .custom-menu.show {
+            transform: translateX(0);
+        }
+        
+        .collection,
+        .collection.with-header {
+            border-bottom: 1px solid #4d4d4d;
+            margin: 0;
+        }
+        
+        .collection.with-header {
+            border-radius: 25px;
+        }
+        
+        .collection.with-header .collection-header {
+            background-color: #4d4d4d;
+            border-bottom: 1px solid #4d4d4d;
+            padding: 0;
+        }
+        
+        .collection a.collection-item {
+            padding-left: 10px;
+            background: #4d4d4d;
+            color: #ffffff;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .color {
+            background-color: #4d4d4d;
+            color: #ffffff;
+            border-radius: 25px;
+        }
+        
+        .fondlogo {
+            border-radius: 25px;
+            background: #666666;
+            width: 105px;
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20% auto;
+        }
+        
+        .logo {
+            width: 103px;
+            height: 103px;
+        }
+        
+        .salir {
+            border-radius: 30px;
+            border: 1px solid #666666;
+            background: #666666;
+            filter: blur(-2px);
+            margin: auto;
+            width: 109px;
+            height: 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+            margin-bottom: 5vh;
+        }
+        
+        .fontmenu {
+            color: #ffffff;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        .fontboton {
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c Bold;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .customside {
+            border: 1px solid #666666;
+        }
+        
+        .iconmenu {
+            font-size: 30px;
+            color: #333333;
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 1001;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .logofooter {
+            width: 80px;
+            float: right;
+            text-align: right;
+            align-items: flex-end;
+            align-content: flex-end;
+        }
+        
+        .containerart {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header-container {
+            width: 80%;
+            max-width: 800px;
+            height: 56px;
+            border-radius: 27px 27px 0px 0px;
+            border: 0px solid #d9d9d956;
+            background: #333333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .titleart {
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c Bold;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .content-container {
+            width: 80%;
+            max-width: 100%;
+            height: 70vh;
+            border-radius: 24px;
+            border: 0px solid #666666;
+            background: #4d4d4d;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            align-items: center;
+            overflow-y: auto;
+            max-height: 70vh;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(100%);
+            opacity: 0.1;
+            max-width: 99%;
+            max-height: 99%;
+        }
+        
+        .custom-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .botonhbs {
+            background-color: #ffffff;
+            color: #4d4d4d;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        
+        .botonhbs:hover {
+            background-color: #4d4d4d;
+            color: #ffffff;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .custom-menu,
+            .customside {
+                width: 100%;
+                max-width: none;
+                border-radius: 0;
+                height: auto;
+            }
+            .customside {
+                border: none;
+            }
+            .collection a.collection-item {
+                padding-left: 20px;
+            }
+            .containerart,
+            .header-container,
+            .content-container {
+                width: 100%;
+                max-width: none;
+                padding: 0;
+            }
+            .header-container {
+                margin-bottom: 10px;
+            }
+            .content-container {
+                padding: 10px;
+            }
+            footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="body1">
+
+    <a href="#" data-target="slide-out" class="ui icon button iconmenu">
+        <i class="bars icon"></i>
+    </a>
+
+    <ul id="slide-out" class="ui sidebar inverted vertical menu customside">
+        <div class="custom-menu fontmenu">
+            <ul class="ui inverted relaxed divided list">
+                <li class="item fontboton">Home</li>
+                <div class="fondlogo">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="item color">Inicio</a>
+                    <a href="compras.html" class="item color">Compras</a>
+                    <a href="articulos.html" class="item color">Articulos</a>
+                    <a href="sedes.html" class="item color">Sedes</a>
+                    <a href="proveedores.html" class="item color">Proveedores</a>
+                    <a href="registrouser.html" class="item color">Usuarios</a>
+                    <a href="informes.html" class="item color">Informes</a>
+                    <a href="quienessomos.html" class="item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+    </ul>
+
+    <div class="containerart">
+        <div class="header-container">
+            <p class="titleart">Home</p>
+        </div>
+        <div class="content-container">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="custom-row">
+                <header>
+                    <h2>Mensaje Motivacional de HBS</h2>
+                </header>
+                <section class="motivational-message">
+                    <!-- Contenido existente ... -->
+                </section>
+            </div>
+            <footer>
+                <p>¡Juntos podemos hacer la diferencia!</p>
+            </footer>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logofooter">
+            <img class="logofooter" src="Imagenes/2.png" alt="">
+        </div>
+        <div>
+            <p>&copy; 2023 HBS Todos los derechos reservados</p>
+            <p>
+                <a href="#">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.ui.button.iconmenu').on('click', function() {
+                $('.ui.sidebar').sidebar('toggle');
+                $('.custom-menu').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

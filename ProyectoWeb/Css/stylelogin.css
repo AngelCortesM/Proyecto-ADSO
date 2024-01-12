@@ -1,0 +1,298 @@
+.bodyindex {
+    margin-top: 10vh;
+    max-height: 70vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.containerart {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    /* Agrega flexbox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centra horizontalmente */
+}
+
+.divheader {
+    width: 60%;
+    height: 56px;
+    border-radius: 27px 27px 0px 0px;
+    border: 0px solid #d9d9d956;
+    background: rgba(36, 35, 33, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.titleart {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.divcontent {
+    width: 80%;
+    height: 70vh;
+    border-radius: 24px;
+    border: 0px solid #D9D9D9;
+    background: #313131;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    overflow-y: auto;
+    /* Agrega desplazamiento vertical si el contenido se desborda */
+    max-height: 70vh;
+    /* Establece la altura máxima igual a la altura del padre (70vh) */
+    margin-bottom: 0;
+}
+
+.divcontentindex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.divcontentindex a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    border: 0px solid #D9D9D9;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.watermark {
+    position: absolute;
+    top: 50%;
+    /* Ajusta la posición vertical */
+    left: 50%;
+    /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%) scale(100%);
+    /* Escala la imagen al 10% del tamaño del contenedor padre */
+    opacity: 0.1;
+    /* Ajusta la opacidad de la marca de agua */
+    max-width: 99%;
+    max-height: 99%;
+    /* Evita que la imagen se desborde del contenedor padre */
+}
+
+
+/* Estilo personalizado para la clase .row */
+
+.custom-row {
+    display: flex;
+    /* Usa flexbox para distribuir elementos en fila */
+    flex-wrap: wrap;
+    /* Asegura que los elementos se envuelvan cuando no quepan en el ancho de la pantalla */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
+    justify-content: center;
+    /* Centra horizontalmente los elementos en la fila */
+    align-items: center;
+    /* Centra verticalmente los elementos en la fila */
+}
+
+
+/* Estilo personalizado para los elementos de la clase .col s12 dentro de .row */
+
+.custom-col {
+    top: 20px;
+    flex: 0 0 100%;
+    /* Asegura que cada columna ocupe todo el ancho disponible */
+    max-width: 100%;
+    /* Asegura que las columnas no excedan el ancho máximo */
+    margin: 7px;
+    /* Agrega un margen entre las columnas */
+}
+
+.customhbs-formhbs {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* Centra el texto en el formulario */
+}
+
+.customhbs-input.input-field {
+    margin-bottom: 0;
+    margin: 0 auto;
+    /* Restablece el margen inferior que agrega Materialize */
+}
+
+
+/* Desactiva el efecto de resaltado en los campos de entrada de Materialize */
+
+.input-field input[type="text"]:focus+label,
+.input-field input[type="password"]:focus+label,
+.input-field input[type="email"]:focus+label,
+.input-field input[type="number"]:focus+label,
+.input-field textarea:focus+label {
+    color: #ffffff !important;
+    /* Restablece el color del texto de la etiqueta al color deseado */
+}
+
+
+/* Opcional: Desactiva la línea verde que se muestra en la parte inferior de los campos de entrada */
+
+.input-field input[type="text"]:focus,
+.input-field input[type="password"]:focus,
+.input-field input[type="email"]:focus,
+.input-field input[type="number"]:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid #414141 !important;
+    /* Restablece el borde inferior al color deseado */
+    box-shadow: none !important;
+    /* Restablece la sombra al borde inferior al color deseado */
+}
+
+.input-field label {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.input-field label i {
+    margin-left: 555px;
+}
+
+.custom-col {
+    top: 20px;
+    flex: 0 0 100%;
+    /* Asegura que cada columna ocupe todo el ancho disponible */
+    max-width: 100%;
+    /* Asegura que las columnas no excedan el ancho máximo */
+    margin: 7px;
+    /* Agrega un margen entre las columnas */
+}
+
+.customhbs-input {
+    width: 100%;
+    padding: 10px;
+    border: 0px solid #ccc;
+    border-radius: 25px;
+    margin-bottom: 0;
+    /* Elimina el margen inferior */
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    color: #ffffff;
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.customhbs-input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+    color: hsl(0, 0%, 100%);
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.customhbs-input:focus+label {
+    color: #2196F3;
+    text-align: center;
+    color: #ffffff;
+    font-family: Rounded Mplus 1c Bold;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* Centra el texto de la etiqueta al enfocar */
+}
+
+
+/* Limpieza de estilos de Materialize que pueden causar conflictos */
+
+.customhbs-input.input-field {
+    margin-bottom: 0;
+    margin: 0 auto;
+    /* Restablece el margen inferior que agrega Materialize */
+}
+
+.label-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-icon i {
+    margin-right: 100px;
+    /* Ajusta el espacio entre el ícono y el texto según sea necesario */
+}
+
+.divfooter {
+    width: 60%;
+    height: 60px;
+    border-radius: 0px 0px 27px 27px;
+    border: 0px solid #D9D9D9;
+    background: rgba(36, 35, 33, 0.5);
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(70vh + 56px);
+    backdrop-filter: blur(10px);
+}
+
+.botonhbs {
+    width: 110px;
+    height: 40px;
+    margin-top: 3mm;
+    /* Aumenta la altura para un botón más visible */
+    border-radius: 15px;
+    /* Reduzco el radio del borde para una apariencia más redonda */
+    border: 0px solid #d9d9d9;
+    background: #2b2a2a;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    /* Reduce el desenfoque del texto */
+    font-family: "Rounded Mplus 1c Bold", sans-serif;
+    /* Asegúrate de que la fuente se aplique correctamente */
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente */
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* Cambio el cursor para indicar que es un botón interactivo */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    /* Agrego transiciones suaves */
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.botonhbs:hover {
+    background: #f1f1f1;
+    /* Cambia el color de fondo al pasar el mouse */
+    color: #333;
+    /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05);
+    /* Un ligero efecto de escala al pasar el mouse */
+}

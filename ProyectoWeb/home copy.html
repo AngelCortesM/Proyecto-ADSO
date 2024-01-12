@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="Css/style.css">
+
+    <style>
+        body {
+            color: #ffffff;
+            margin: 0;
+            /* Elimina el margen predeterminado del body */
+            overflow: hidden;
+            /* Evita el scroll en el body */
+        }
+        
+        .custom-menu,
+        .customside {
+            width: 100%;
+            /* Cambia el ancho al 100% para ocupar todo el ancho */
+            max-width: 170px;
+            /* Opcional: establece un ancho máximo si lo deseas */
+            border-radius: 24px;
+            height: 100vh;
+            background: #4d4d4d;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .error-message,
+        .success-message {
+            font-size: 0.8rem;
+            margin-top: -0.5rem;
+        }
+        
+        .collection,
+        .collection.with-header {
+            border-bottom: 1px solid #4d4d4d;
+            margin: 0rem 0 0rem 0;
+        }
+        
+        .collection.with-header {
+            border-radius: 25px;
+        }
+        
+        .collection.with-header .collection-header {
+            background-color: #4d4d4d;
+            border-bottom: 1px solid #4d4d4d;
+            padding: 0px 0px;
+        }
+        
+        .collection a.collection-item {
+            padding-left: 10px;
+            background: #4d4d4d;
+            color: #ffffff;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+        
+        .color {
+            background-color: #4d4d4d;
+            color: #ffffff;
+            border-radius: 25px;
+        }
+        
+        .fondlogo {
+            border-radius: 25px;
+            background: #666666;
+            width: 105px;
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20% auto;
+            /* Cambia el margen a "auto" para centrar horizontalmente */
+        }
+        
+        .logo {
+            width: 103px;
+            height: 103px;
+        }
+        
+        .salir {
+            border-radius: 30px;
+            border: 1px solid #666666;
+            background: #666666;
+            filter: blur(-2px);
+            margin: auto;
+            /* Cambia el margen a "auto" para centrar horizontalmente */
+            width: 109px;
+            height: 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+            margin-bottom: 5vh;
+            /* Ajusta la posición vertical según sea necesario */
+        }
+        
+        .fontmenu {
+            color: #ffffff;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        .fontboton {
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c Bold;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .customside {
+            border: 1px solid #666666;
+        }
+        
+        .iconmenu {
+            transform: translateY(-50%);
+            z-index: 9999;
+            font-size: 30px;
+            margin-left: 20px;
+            color: #333333;
+        }
+        
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .logofooter {
+            width: 80px;
+            float: right;
+            text-align: right;
+            align-items: flex-end;
+            align-content: flex-end;
+        }
+        
+        .containerart {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header-container {
+            width: 80%;
+            max-width: 800px;
+            height: 56px;
+            border-radius: 27px 27px 0px 0px;
+            border: 0px solid #d9d9d956;
+            background: #333333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .titleart {
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-family: Rounded Mplus 1c Bold;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .content-container {
+            width: 80%;
+            max-width: 100%;
+            height: 70vh;
+            border-radius: 24px;
+            border: 0px solid #666666;
+            background: #4d4d4d;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            align-items: center;
+            overflow-y: auto;
+            max-height: 70vh;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+        
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(100%);
+            opacity: 0.1;
+            max-width: 99%;
+            max-height: 99%;
+        }
+        
+        .divcontent::-webkit-scrollbar {
+            margin: 10px;
+            width: 10px;
+        }
+        
+        .divcontent::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        
+        .divcontent::-webkit-scrollbar-track {
+            background-color: #4d4d4d;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        
+        .custom-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .botonhbs {
+            background-color: #ffffff;
+            color: #4d4d4d;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        
+        .botonhbs:hover {
+            background-color: #4d4d4d;
+            color: #ffffff;
+        }
+        /* Estilos específicos para pantallas más pequeñas */
+        
+        @media only screen and (max-width: 600px) {
+            .custom-menu,
+            .customside {
+                width: 100%;
+                max-width: none;
+                border-radius: 0;
+                /* Elimina el redondeo en dispositivos móviles */
+                height: auto;
+            }
+            .customside {
+                border: none;
+                /* Elimina el borde en dispositivos móviles */
+            }
+            .collection a.collection-item {
+                padding-left: 20px;
+                /* Aumenta el espaciado en dispositivos móviles */
+            }
+            .containerart,
+            .header-container,
+            .content-container {
+                width: 100%;
+                max-width: none;
+                padding: 0;
+                /* Elimina el relleno en dispositivos móviles */
+            }
+            .header-container {
+                margin-bottom: 10px;
+                /* Espaciado entre el encabezado y el contenido en dispositivos móviles */
+            }
+            .content-container {
+                padding: 10px;
+                /* Agrega un pequeño relleno en dispositivos móviles */
+            }
+            footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="slide-out" class="sidenav customside">
+        <div class="custom-menu fontmenu">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h5 class=" fontboton">Home</h5>
+                </li>
+                <div class="fondlogo ">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="collection-item color">Inicio</a>
+                    <a href="compras.html" class="collection-item color">Compras</a>
+                    <a href="articulos.html" class="collection-item color">Articulos</a>
+                    <a href="sedes.html" class="collection-item color">Sedes</a>
+                    <a href="proveedores.html" class="collection-item color">Proveedores</a>
+                    <a href="registrouser.html" class="collection-item color">Usuarios</a>
+                    <a href="informes.html" class="collection-item color">Informes</a>
+                    <a href="quienessomos.html" class="collection-item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger iconmenu">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <div class="containerart">
+        <div class="header-container">
+            <p class="titleart">Home</p>
+        </div>
+        <div class="content-container">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="custom-row">
+                <header>
+                    <h2>Mensaje Motivacional de HBS</h2>
+                </header>
+                <section class="motivational-message">
+                    <p>En HBS, creemos en el poder de la acción, en la capacidad de hacer un impacto positivo en el mundo. Cada día, trabajamos incansablemente para construir un futuro mejor para todos, y tú eres una parte fundamental de este viaje.</p>
+                    <p>Recuerda que cada pequeño paso que das, cada elección que haces, puede marcar la diferencia. Al unirte a nosotros, no solo aprovechas nuestros módulos eficientes y ahorras dinero, también te conviertes en un agente de cambio.</p>
+                    <p>Juntos, estamos escribiendo una hermosa historia de compromiso con el medio ambiente y la sostenibilidad. Tu participación en esta misión es un recordatorio de que cada uno de nosotros tiene el poder de crear un mundo más limpio y
+                        saludable.
+                    </p>
+                    <p>No subestimes el impacto de tus acciones. ¡Sé la inspiración que el mundo necesita! En HBS, estamos aquí para apoyarte en cada paso de tu viaje. Sigamos trabajando juntos hacia un futuro más brillante.</p>
+                    <p>¡Gracias por ser parte de HBS y por ser una fuente de inspiración para un mundo mejor!</p>
+                </section>
+            </div>
+            <footer>
+                <p>¡Juntos podemos hacer la diferencia!</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="logofooter">
+            <img class="logofooter" src="Imagenes/2.png" alt="">
+        </div>
+        <div>
+            <p>&copy; 2023 HBS Todos los derechos reservados</p>
+            <p>
+                <a href="#">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </p>
+        </div>
+    </footer>
+    <script src="Js/materialize.min.js"></script>
+
+    <!-- Inicializar el componente de la colección para el menú vertical -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>

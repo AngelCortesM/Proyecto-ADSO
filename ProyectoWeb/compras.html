@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+
+
+    <!--load all styles -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body class="body1">
+
+    <ul id="slide-out" class="sidenav customside">
+        <div class="custom-menu fontmenu">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h5 class="fontboton">Home</h5>
+                </li>
+                <div class="fondlogo ">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="collection-item color">Inicio</a>
+                    <a href="compras.html" class="collection-item color">Compras</a>
+                    <a href="articulos.html" class="collection-item color">Articulos</a>
+                    <a href="sedes.html" class="collection-item color">Sedes</a>
+                    <a href="proveedores.html" class="collection-item color">Proveedores</a>
+                    <a href="registrouser.html" class="collection-item color">Usuarios</a>
+                    <a href="informes.html" class="collection-item color">Informes</a>
+                    <a href="quienessomos.html" class="collection-item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+    </ul>
+
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger iconmenu">
+        <i class="fa-solid fa-bars">MENU</i>
+    </a>
+
+    <div class="containerart ">
+        <div class="divheader">
+            <p class="titleart">Grabacion de Compras</p>
+        </div>
+        <div class="divcontent ">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="row ">
+
+                <form class="col s12 ">
+                    <div class="row no-margin ">
+                        <div class="input-field col s4">
+                            <i class="fas fa-calendar-alt prefix white-icon small-icon"></i>
+                            <input id="fecha" type="date" class="customhbs-input">
+                            <label for="fecha">Fecha</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-id-card prefix white-icon small-icon"></i>
+                            <input id="nit" type="text" class="customhbs-input">
+                            <label for="nit">NIT</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-store prefix white-icon small-icon"></i>
+                            <input id="sede" type="number" class="customhbs-input">
+                            <label for="sede">Sede</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-calendar-alt prefix white-icon small-icon"></i>
+                            <input id="vence" type="date" class="customhbs-input">
+                            <label for="vence">Vence</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-dollar-sign prefix white-icon small-icon"></i>
+                            <input id="valor" type="number" class="customhbs-input">
+                            <label for="valor">Valor</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-file-invoice-dollar prefix white-icon small-icon"></i>
+                            <input id="baseg" type="number" class="customhbs-input">
+                            <label for="baseg">Base Gravable</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-file-invoice prefix white-icon small-icon"></i>
+                            <input id="basee" type="number" class="customhbs-input">
+                            <label for="basee">Base Exenta</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-percentage prefix white-icon small-icon"></i>
+                            <input id="iva" type="number" class="customhbs-input">
+                            <label for="iva">IVA</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <i class="fas fa-percentage prefix white-icon small-icon"></i>
+                            <input id="descuentos" type="number" class="customhbs-input">
+                            <label for="descuentos">Descuentos</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-shipping-fast prefix white-icon small-icon"></i>
+                            <input id="fletes" type="number" class="customhbs-input">
+                            <label for="fletes">Fletes</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-hand-holding-usd prefix white-icon small-icon"></i>
+                            <input id="retencion" type="number" class="customhbs-input">
+                            <label for="retencion">Retención</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-percentage prefix white-icon small-icon"></i>
+                            <input id="porrete" type="number" class="customhbs-input">
+                            <label for="porrete">Porcentaje Retención</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-cart-arrow-down prefix white-icon small-icon"></i>
+                            <input id="pedido" type="text" class="customhbs-input" onclick="openModal()">
+                            <label for="pedido">Pedido</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-warehouse prefix white-icon small-icon"></i>
+                            <input id="bodega" type="text" class="customhbs-input">
+                            <label for="bodega">Bodega</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-flag prefix white-icon small-icon"></i>
+                            <input id="estado" type="text" class="customhbs-input">
+                            <label for="estado">Estado</label>
+                        </div>
+
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-clock prefix white-icon small-icon"></i>
+                            <input id="hora" type="time" class="customhbs-input">
+                            <label for="hora">Hora</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-sort-numeric-up prefix white-icon small-icon"></i>
+                            <input id="numero" type="text" class="customhbs-input">
+                            <label for="numero">Número</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-random prefix white-icon small-icon"></i>
+                            <input id="aproxima" type="number" class="customhbs-input">
+                            <label for="aproxima">Aproxima</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-money-check-alt prefix white-icon small-icon"></i>
+                            <input id="imp01" type="number" class="customhbs-input">
+                            <label for="imp01">Impuesto 01</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-calculator prefix white-icon small-icon"></i>
+                            <input id="contable" type="text" class="customhbs-input">
+                            <label for="contable">Contable</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-id-card-alt prefix white-icon small-icon"></i>
+                            <input id="nproveedor" type="text" class="customhbs-input">
+                            <label for="nproveedor">Nombre Proveedor</label>
+                        </div>
+
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-percent prefix white-icon small-icon"></i>
+                            <input id="factor" type="number" class="customhbs-input" value="0">
+                            <label for="factor">Factor</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-random prefix white-icon small-icon"></i>
+                            <input id="trasmite" type="text" class="customhbs-input" value="*">
+                            <label for="trasmite">Trasmite</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-code-branch prefix white-icon small-icon"></i>
+                            <input id="codigo_sucursal" type="text" class="customhbs-input" value=".">
+                            <label for="codigo_sucursal">Código Sucursal</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-user prefix white-icon small-icon"></i>
+                            <input id="usuario" type="text" class="customhbs-input">
+                            <label for="usuario">Usuario</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-calendar-alt prefix white-icon small-icon"></i>
+                            <input id="fecha_sistema" type="datetime-local" class="customhbs-input" value="now()">
+                            <label for="fecha_sistema">Fecha del Sistema</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-comment-alt prefix white-icon small-icon"></i>
+                            <textarea id="detalle" class="materialize-textarea" value="."></textarea>
+                            <label for="detalle">Detalle</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-download prefix white-icon small-icon"></i>
+                            <input id="valor_descargue" type="number" class="customhbs-input" value="0">
+                            <label for="valor_descargue">Valor Descargue</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-exchange-alt prefix white-icon small-icon"></i>
+                            <input id="afecta_cartera" type="text" class="customhbs-input">
+                            <label for="afecta_cartera">Afecta Cartera</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <i class="fas fa-calendar-day prefix white-icon small-icon"></i>
+                            <input id="fecha_recibido" type="date" class="customhbs-input" value="now()">
+                            <label for="fecha_recibido">Fecha Recibido</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="divfooter">
+            <a href="home.html"> <button class="botonhbs">Registrar</button></a>
+
+            <a class="botonhbs modal-trigger" href="#modalConsultaCompras">Consultar Compras</a>
+
+
+
+        </div>
+    </div>
+
+    <div id="modalArticulos" class="modal custom-modal">
+        <div class="modal-content custom-modal-inner">
+            <div class="modal-content">
+                <div class="row center-align">
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput1" type="number" class="customhbs-input">
+                        <label for="modalInput1"><i class="fa-solid fa-fingerprint"></i> Id</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput2" type="text" class="customhbs-input">
+                        <label for="modalInput2"><i class="fa-solid fa-newspaper"></i> Nombre</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput3" type="number" class="customhbs-input">
+                        <label for="modalInput3"><i class="fa-solid fa-barcode"></i> Barras</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput4" type="text" class="customhbs-input">
+                        <label for="modalInput4"><i class="fa-solid fa-signature"></i> Alias</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput5" type="number" class="customhbs-input">
+                        <label for="modalInput5"><i class="fa-solid fa-certificate"></i> Marca</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput6" type="number" class="customhbs-input">
+                        <label for="modalInput6"><i class="fa-solid fa-box"></i> Contenido</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput7" type="text" class="customhbs-input">
+                        <label for="modalInput7"><i class="fa-solid fa-layer-group"></i> Tipo</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput8" type="number" class="customhbs-input">
+                        <label for="modalInput8"><i class="fa-solid fa-dollar-sign"></i> Costo</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput9" type="number" class="customhbs-input">
+                        <label for="modalInput9"><i class="fa-solid fa-dollar-sign"></i> IVA</label>
+                    </div>
+                    <div class="input-field custom-col s12">
+                        <input id="modalInput10" type="number" class="customhbs-input">
+                        <label for="modalInput10"><i class="fa-solid fa-dollar-sign"></i> Precio</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="botonhbs">
+                <a href="#!" class="modal-close ">Insertar</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- consultar compras -->
+    <div id="modalConsultaCompras" class="modal ">
+        <div class="modal-content custom-modal-inner">
+            <!-- Contenido del modal -->
+            <h4 class="modal-title">Compras Registradas</h4>
+            <div class="modal-content">
+                <div class="row center-align">
+                    <!-- Tabla donde se mostrarán las compras -->
+                    <table class="striped responsive-table table-white-text">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Proveedor</th>
+                                <th>Fecha de Compra</th>
+                                <th>Vence</th>
+                                <th>Valor</th>
+                                <th>Base Gravable</th>
+                                <th>Base Exenta</th>
+                                <th>IVA</th>
+                                <th>Descuentos</th>
+                                <th>Fletes</th>
+                                <th>Retención</th>
+                                <th>Porcentaje Retención</th>
+                                <th>Pedido</th>
+                                <th>Bodega</th>
+                                <th>Estado</th>
+                                <th>Hora</th>
+                                <th>Número</th>
+                                <th>Aproxima</th>
+                                <th>Impuesto 01</th>
+                                <th>Contable</th>
+                                <th>Nombre Proveedor</th>
+                                <th>Factor</th>
+                                <th>Trasmite</th>
+                                <th>Código Sucursal</th>
+                                <th>Usuario</th>
+                                <th>Fecha del Sistema</th>
+                                <th>Detalle</th>
+                                <th>Valor Descargue</th>
+                                <th>Afecta Cartera</th>
+                                <th>Fecha Recibido</th>
+                                <!-- Agrega más columnas según tus campos -->
+                            </tr>
+                        </thead>
+                        <tbody id="tablaComprasBody">
+                            <!-- Aquí se agregarán las filas de la tabla dinámicamente con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="botonhbs">
+                <a href="#!" class="modal-close link-white-text">exportar</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Js/materialize.min.js"></script>
+
+
+    <!-- Inicializar el componente de la colección para el menú vertical -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            M.Modal.init(elems);
+        });
+
+        function openModal() {
+            var modal = M.Modal.getInstance(document.getElementById('modalArticulos'));
+            modal.open();
+        }
+
+        // Manejar el evento de tecla "Enter"
+        document.addEventListener('keydown', function(event) {
+            handleEnter(event);
+        });
+
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                // Enfocar en el siguiente campo de entrada
+                focusNextInput(event.target);
+            }
+        }
+
+        // Función para enfocar en el siguiente campo de entrada
+        function focusNextInput(currentInput) {
+            var form = currentInput.form;
+            var index = Array.prototype.indexOf.call(form, currentInput);
+            var nextInput = form.elements[index + 1];
+
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+
+        // Función para manejar el clic en el enlace "Registrar"
+
+
+
+
+
+        function registrarCompra() {
+            const inputFields = document.querySelectorAll('.customhbs-input');
+            inputFields.forEach(function(input) {
+                console.log(input.id + ':', input.value);
+            });
+            // Agrega aquí la lógica para manejar la información de la compra
+        }
+
+        // consultar compras
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+
+            // Lógica para cargar los datos de compras en la tabla al abrir el modal
+            document.getElementById('modalConsultaCompras').addEventListener('click', function() {
+                cargarDatosCompras();
+            });
+        });
+
+        // Función para cargar datos de compras en la tabla
+
+
+        //datos simuladosconst datos = [
+        const datos = [{
+                id: 1,
+                producto: "Arroz",
+                cantidad: 50,
+                precio: 1000,
+                total: 50000,
+                proveedor: "Arroz S.A.",
+                fechaDeCompra: "2023-12-30",
+                vence: "2024-03-01",
+                valor: 50000,
+                baseGravable: 50000,
+                baseExenta: 0,
+                iva: 5000,
+                descuentos: 0,
+                fletes: 0,
+                retencion: 2500,
+                porcentajeRetencion: 25,
+                pedido: 1,
+                bodega: 1,
+                estado: "Pagado",
+                hora: "12:00:00",
+                numero: 123456,
+                aproxima: false,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Arroz S.A.",
+                factor: 0,
+                transmite: 1,
+                codigoSucursal: 1,
+                usuario: "Juan Pérez",
+                fechaDelSistema: "2023-12-30",
+                detalle: "Arroz: 50 kg",
+                valorDescargue: 50000,
+                afectaCartera: false,
+                fechaRecibido: "2023-12-31"
+            }, {
+                id: 2,
+                producto: "Azúcar",
+                cantidad: 30,
+                precio: 800,
+                total: 24000,
+                proveedor: "Azúcar Ltda.",
+                fechaDeCompra: "2023-12-31",
+                vence: "2024-03-15",
+                valor: 24000,
+                baseGravable: 24000,
+                baseExenta: 0,
+                iva: 0,
+                descuentos: 1200,
+                fletes: 500,
+                retencion: 1200,
+                porcentajeRetencion: 5,
+                pedido: 2,
+                bodega: 2,
+                estado: "Pendiente",
+                hora: "14:30:00",
+                numero: 654321,
+                aproxima: true,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Azúcar Ltda.",
+                factor: 1,
+                transmite: 0,
+                codigoSucursal: 2,
+                usuario: "María Gómez",
+                fechaDelSistema: "2023-12-31",
+                detalle: "Azúcar: 30 kg",
+                valorDescargue: 24000,
+                afectaCartera: true,
+                fechaRecibido: "2024-01-02"
+            }, {
+                id: 3,
+                producto: "Aceite",
+                cantidad: 15,
+                precio: 1500,
+                total: 22500,
+                proveedor: "Aceite S.A.",
+                fechaDeCompra: "2024-01-02",
+                vence: "2024-04-01",
+                valor: 22500,
+                baseGravable: 22500,
+                baseExenta: 0,
+                iva: 1125,
+                descuentos: 500,
+                fletes: 200,
+                retencion: 1100,
+                porcentajeRetencion: 5,
+                pedido: 3,
+                bodega: 1,
+                estado: "Pagado",
+                hora: "10:45:00",
+                numero: 789012,
+                aproxima: false,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Aceite S.A.",
+                factor: 0,
+                transmite: 1,
+                codigoSucursal: 1,
+                usuario: "Carlos Ruiz",
+                fechaDelSistema: "2024-01-02",
+                detalle: "Aceite: 15 l",
+                valorDescargue: 22500,
+                afectaCartera: false,
+                fechaRecibido: "2024-01-03"
+            }, {
+                id: 4,
+                producto: "Harina",
+                cantidad: 20,
+                precio: 750,
+                total: 15000,
+                proveedor: "Harina Corp.",
+                fechaDeCompra: "2024-01-05",
+                vence: "2024-04-30",
+                valor: 15000,
+                baseGravable: 15000,
+                baseExenta: 0,
+                iva: 750,
+                descuentos: 200,
+                fletes: 100,
+                retencion: 800,
+                porcentajeRetencion: 5,
+                pedido: 4,
+                bodega: 2,
+                estado: "Pendiente",
+                hora: "09:15:00",
+                numero: 234567,
+                aproxima: true,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Harina Corp.",
+                factor: 1,
+                transmite: 0,
+                codigoSucursal: 2,
+                usuario: "Ana Martínez",
+                fechaDelSistema: "2024-01-05",
+                detalle: "Harina: 20 kg",
+                valorDescargue: 15000,
+                afectaCartera: true,
+                fechaRecibido: "2024-01-06"
+            }, {
+                id: 5,
+                producto: "Leche",
+                cantidad: 40,
+                precio: 500,
+                total: 20000,
+                proveedor: "Leche Ltda.",
+                fechaDeCompra: "2024-01-07",
+                vence: "2024-05-15",
+                valor: 20000,
+                baseGravable: 20000,
+                baseExenta: 0,
+                iva: 1000,
+                descuentos: 0,
+                fletes: 300,
+                retencion: 800,
+                porcentajeRetencion: 4,
+                pedido: 5,
+                bodega: 1,
+                estado: "Pagado",
+                hora: "11:30:00",
+                numero: 345678,
+                aproxima: false,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Leche Ltda.",
+                factor: 0,
+                transmite: 1,
+                codigoSucursal: 1,
+                usuario: "José Rodríguez",
+                fechaDelSistema: "2024-01-07",
+                detalle: "Leche: 40 l",
+                valorDescargue: 20000,
+                afectaCartera: false,
+                fechaRecibido: "2024-01-08"
+            }, {
+                id: 6,
+                producto: "Café",
+                cantidad: 10,
+                precio: 1200,
+                total: 12000,
+                proveedor: "Café S.A.",
+                fechaDeCompra: "2024-01-10",
+                vence: "2024-06-01",
+                valor: 12000,
+                baseGravable: 12000,
+                baseExenta: 0,
+                iva: 600,
+                descuentos: 1000,
+                fletes: 150,
+                retencion: 800,
+                porcentajeRetencion: 6,
+                pedido: 6,
+                bodega: 2,
+                estado: "Pendiente",
+                hora: "08:45:00",
+                numero: 456789,
+                aproxima: true,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Café S.A.",
+                factor: 1,
+                transmite: 0,
+                codigoSucursal: 2,
+                usuario: "Laura Gutiérrez",
+                fechaDelSistema: "2024-01-10",
+                detalle: "Café: 10 kg",
+                valorDescargue: 12000,
+                afectaCartera: true,
+                fechaRecibido: "2024-01-11"
+            }, {
+                id: 7,
+                producto: "Azúcar",
+                cantidad: 25,
+                precio: 900,
+                total: 22500,
+                proveedor: "Azúcar Ltda.",
+                fechaDeCompra: "2024-01-12",
+                vence: "2024-07-01",
+                valor: 22500,
+                baseGravable: 22500,
+                baseExenta: 0,
+                iva: 1125,
+                descuentos: 0,
+                fletes: 200,
+                retencion: 800,
+                porcentajeRetencion: 4,
+                pedido: 7,
+                bodega: 1,
+                estado: "Pagado",
+                hora: "13:00:00",
+                numero: 567890,
+                aproxima: false,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Azúcar Ltda.",
+                factor: 0,
+                transmite: 1,
+                codigoSucursal: 1,
+                usuario: "Roberto Pérez",
+                fechaDelSistema: "2024-01-12",
+                detalle: "Azúcar: 25 kg",
+                valorDescargue: 22500,
+                afectaCartera: false,
+                fechaRecibido: "2024-01-13"
+            }, {
+                id: 8,
+                producto: "Aceite",
+                cantidad: 18,
+                precio: 1300,
+                total: 23400,
+                proveedor: "Aceite S.A.",
+                fechaDeCompra: "2024-01-15",
+                vence: "2024-08-01",
+                valor: 23400,
+                baseGravable: 23400,
+                baseExenta: 0,
+                iva: 1170,
+                descuentos: 500,
+                fletes: 100,
+                retencion: 900,
+                porcentajeRetencion: 5,
+                pedido: 8,
+                bodega: 2,
+                estado: "Pendiente",
+                hora: "10:00:00",
+                numero: 678901,
+                aproxima: true,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Aceite S.A.",
+                factor: 1,
+                transmite: 0,
+                codigoSucursal: 2,
+                usuario: "Sofía Ramírez",
+                fechaDelSistema: "2024-01-15",
+                detalle: "Aceite: 18 l",
+                valorDescargue: 23400,
+                afectaCartera: true,
+                fechaRecibido: "2024-01-16"
+            }, {
+                id: 9,
+                producto: "Arroz",
+                cantidad: 35,
+                precio: 950,
+                total: 33250,
+                proveedor: "Arroz S.A.",
+                fechaDeCompra: "2024-01-18",
+                vence: "2024-09-01",
+                valor: 33250,
+                baseGravable: 33250,
+                baseExenta: 0,
+                iva: 1662.5,
+                descuentos: 800,
+                fletes: 300,
+                retencion: 1000,
+                porcentajeRetencion: 5,
+                pedido: 9,
+                bodega: 1,
+                estado: "Pagado",
+                hora: "11:45:00",
+                numero: 789012,
+                aproxima: false,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Arroz S.A.",
+                factor: 0,
+                transmite: 1,
+                codigoSucursal: 1,
+                usuario: "Eduardo Castro",
+                fechaDelSistema: "2024-01-18",
+                detalle: "Arroz: 35 kg",
+                valorDescargue: 33250,
+                afectaCartera: false,
+                fechaRecibido: "2024-01-19"
+            }, {
+                id: 10,
+                producto: "Harina",
+                cantidad: 15,
+                precio: 800,
+                total: 12000,
+                proveedor: "Harina Corp.",
+                fechaDeCompra: "2024-01-20",
+                vence: "2024-10-01",
+                valor: 12000,
+                baseGravable: 12000,
+                baseExenta: 0,
+                iva: 600,
+                descuentos: 300,
+                fletes: 150,
+                retencion: 800,
+                porcentajeRetencion: 5,
+                pedido: 10,
+                bodega: 2,
+                estado: "Pendiente",
+                hora: "09:30:00",
+                numero: 890123,
+                aproxima: true,
+                impuesto01: 0,
+                contable: 0,
+                nombreProveedor: "Harina Corp.",
+                factor: 1,
+                transmite: 0,
+                codigoSucursal: 2,
+                usuario: "Lucía Gómez",
+                fechaDelSistema: "2024-01-20",
+                detalle: "Harina: 15 kg",
+                valorDescargue: 12000,
+                afectaCartera: true,
+                fechaRecibido: "2024-01-21"
+            },
+            // Puedes agregar más objetos de datos según sea necesario
+        ];
+        const tbody = document.querySelector("#tablaComprasBody");
+
+        for (const dato of datos) {
+            const fila = document.createElement("tr");
+
+            for (const key of Object.keys(dato)) {
+                const celda = document.createElement("td");
+                celda.textContent = dato[key];
+                celda.style.fontSize = "8px";
+                fila.appendChild(celda);
+            }
+
+            tbody.appendChild(fila);
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

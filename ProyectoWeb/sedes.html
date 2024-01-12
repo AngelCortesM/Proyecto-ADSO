@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS</title>
+    <link rel="stylesheet" href="Css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <link rel="stylesheet" href="Css/style.css">
+    <style>
+        /* Estilo para asegurarse de que la barra de navegación ocupe toda la altura de la página */
+    </style>
+</head>
+
+<body class="body1">
+
+
+
+    <ul id="slide-out" class="sidenav customside">
+
+
+
+
+
+        <div class="custom-menu fontmenu ">
+            <ul class="collection with-header ">
+                <li class="collection-header ">
+                    <h5 class="center-align fontboton">Home</h5>
+                </li>
+                <div class="fondlogo center-align">
+                    <img class="logo" src="Imagenes/2.png" alt="">
+                </div>
+                <div>
+                    <a href="home.html" class="collection-item color ">Inicio</a>
+                    <a href="compras.html" class="collection-item color">Compras</a>
+                    <a href="articulos.html" class="collection-item color">Articulos</a>
+                    <a href="sedes.html" class="collection-item color">Sedes</a>
+                    <a href="proveedores.html" class="collection-item color">Proveedores</a>
+                    <a href="registrouser.html" class="collection-item color">Usuarios</a>
+                    <a href="informes.html" class="collection-item color">Informes</a>
+                    <a href="quienessomos.html" class="collection-item color">Quienes Somos?</a>
+                    <a href="index.html"><button class="salir fontboton">Salir</button></a>
+                </div>
+            </ul>
+        </div>
+
+
+
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger iconmenu">
+        <i class="fa-solid fa-bars">MENU</i>
+    </a>
+
+
+    <!-- --contenido -->
+
+
+
+
+
+    <div class="containerart">
+        <div class="divheader">
+            <p class="titleart">Registro de Sedes</p>
+        </div>
+        <div class="divcontent">
+            <img src="Imagenes/2.png" alt="" class="watermark">
+            <div class="custom-row center-align">
+                <form class="custom-col s12 customhbs-formhbs center-align">
+                    <div class="row center-align">
+                        <div class="input-field custom-col s12">
+                            <input id="input1" type="number" class="customhbs-input">
+                            <label for="input1"><i class="fa-solid fa-fingerprint ">   </i> Id</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input2" type="text" class="customhbs-input">
+                            <label for="input2"><i class="fa-solid fa-newspaper">   </i> Nombre</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input3" type="number" class="customhbs-input">
+                            <label for="input3"><i class="fa-solid fa-envelope">    </i> Email</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input4" type="text" class="customhbs-input">
+                            <label for="input4"><i class="fa-solid fa-phone"></i>Telefono</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input4" type="number" class="customhbs-input">
+                            <label for="input5"><i class="fa-solid fa-location-dot"></i>Dirección</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input4" type="number" class="customhbs-input">
+                            <label for="input6"><i class="fa-solid fa-city"></i>Ciudad</label>
+                        </div>
+                        <div class="input-field custom-col s12">
+                            <input id="input4" type="text" class="customhbs-input">
+                            <label for="input7"><i class="fa-solid fa-user-tie"></i>Administrador</label>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="divfooter">
+            <a href="#"> <button class="botonhbs">Registrar</button></a>
+        </div>
+    </div>
+
+
+
+    <script src="Js/materialize.min.js"></script>
+
+
+    <!-- Inicializar el componente de la colección para el menú vertical -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collection');
+            M.Collapsible.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+        });
+
+
+
+        // Manejar el evento de tecla "Enter"
+        document.addEventListener('keydown', function(event) {
+            handleEnter(event);
+        });
+
+
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                // Enfocar en el siguiente campo de entrada
+                focusNextInput(event.target);
+            }
+        }
+
+        // Función para enfocar en el siguiente campo de entrada
+        function focusNextInput(currentInput) {
+            var form = currentInput.form;
+            var index = Array.prototype.indexOf.call(form, currentInput);
+            var nextInput = form.elements[index + 1];
+
+            if (nextInput) {
+                nextInput.focus();
+            }
+        }
+
+        // Función para manejar el clic en el enlace "Registrar"
+        function registrar() {
+            // Aquí puedes poner la lógica para manejar el clic en el enlace "Registrar"
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

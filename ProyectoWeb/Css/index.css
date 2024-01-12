@@ -1,0 +1,577 @@
+/* Estilo del cuerpo */
+
+body,
+h1,
+h2,
+h3,
+p,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bodyindex {
+    margin-top: 15vh;
+    /* Margen superior igual al 10% de la altura de la ventana */
+    max-height: 70vh;
+    /* Altura máxima igual al 70% de la altura de la ventana */
+    align-items: center;
+    /* Alinea elementos al centro en el eje transversal (vertical) */
+    display: flex;
+    /* Usa el modelo de caja flexible (flexbox) */
+    justify-content: center;
+    /* Alinea elementos al centro en el eje principal (horizontal) */
+    background-color: #ffffff;
+    /* Color de fondo blanco */
+}
+
+
+/* Contenedor principal */
+
+.containerart {
+    position: relative;
+    /* Posición relativa para posicionar elementos hijos de manera absoluta */
+    width: 100%;
+    /* Ancho completo del contenedor principal */
+    height: auto;
+    /* Altura automática según el contenido */
+    text-align: center;
+    /* Alinea el texto al centro */
+    display: flex;
+    /* Usa el modelo de caja flexible (flexbox) */
+    flex-direction: column;
+    /* Coloca los elementos hijos en una columna */
+    justify-content: center;
+    /* Alinea elementos hijos al centro en el eje principal (vertical) */
+    align-items: center;
+    /* Alinea elementos hijos al centro en el eje transversal (horizontal) */
+}
+
+
+/* Encabezado */
+
+.divheader {
+    width: 66%;
+    /* Ancho del 60% del contenedor principal */
+    height: 40px;
+    /* Altura fija de 56 píxeles */
+    border-radius: 10px 10px 0px 0px;
+    /* Borde redondeado en la parte superior */
+    background: rgba(17, 17, 17, 0.685);
+    /* Fondo semitransparente con color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra difusa */
+    display: flex;
+    align-items: center;
+    /* Usa el modelo de caja flexible (flexbox) */
+    justify-content: center;
+    /* Alinea elementos hijos al centro en el eje principal (horizontal) */
+    backdrop-filter: blur(10px);
+    /* Aplica un desenfoque al fondo del contenedor */
+}
+
+
+/* Título del encabezado */
+
+.titleart {
+    color: #ffffff;
+    /* Color del texto blanco */
+    text-align: center;
+    /* Alinea el texto al centro */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Sombra del texto */
+    font-size: 18px;
+    /* Tamaño de fuente de 18 píxeles */
+    font-weight: 600;
+    /* Peso de la fuente 700 (negrita) */
+    line-height: normal;
+    /* Altura de línea normal */
+}
+
+
+/* Cuerpo principal */
+
+.divcontent {
+    width: 80%;
+    /* Ancho del 80% del contenedor principal */
+    min-height: 50vh;
+    /*  'min-height' para permitir ajuste dinámico */
+    border-radius: 25px;
+    /* Borde redondeado */
+    border: 0px solid #D9D9D9;
+    /* Borde transparente */
+    background: #313131;
+    /* Fondo gris oscuro */
+    backdrop-filter: blur(10px);
+    /* Aplica un desenfoque al fondo del contenedor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra difusa */
+    align-items: center;
+    /* Alinea elementos hijos al centro en el eje transversal (horizontal) */
+    overflow-y: auto;
+    /* Agrega desplazamiento vertical si el contenido se desborda */
+    max-height: 50vh;
+    /* Altura máxima igual al 70% de la altura de la ventana */
+}
+
+
+/* Contenido adicional (sección index) */
+
+.divcontentindex {
+    overflow-x: hidden;
+    align-items: center;
+    /* Alinea elementos hijos al centro en el eje transversal (horizontal) */
+    display: flex;
+    /* Usa el modelo de caja flexible (flexbox) */
+    justify-content: center;
+    /* Alinea elementos hijos al centro en el eje principal (horizontal) */
+}
+
+
+/* Estilo de enlaces en la sección index */
+
+.divcontentindex a {
+    display: flex;
+    /* Usa el modelo de caja flexible (flexbox) */
+    align-items: center;
+    /* Alinea elementos hijos al centro en el eje transversal (horizontal) */
+    color: #ffffff;
+    /* Color del texto blanco */
+    border: 0px solid #D9D9D9;
+    /* Borde transparente */
+    text-decoration: none;
+    /* Sin decoración de enlace (subrayado) */
+    padding-inline: 90px;
+    /* Relleno de 10 píxeles */
+    z-index: 9999;
+    /* Índice z alto para superponer elementos */
+}
+
+
+/* Marca de agua */
+
+.watermark {
+    position: absolute;
+    /* Posición absoluta en relación con el contenedor principal */
+    top: 50%;
+    /* Alinea la parte superior al 50% del contenedor principal */
+    left: 50%;
+    /* Alinea la izquierda al 50% del contenedor principal */
+    transform: translate(-50%, -50%) scale(100%);
+    /* Centra la marca de agua y escala al 100% */
+    opacity: 0.2;
+    /* Opacidad del 10% */
+    max-width: 99%;
+    /* Ancho máximo del 99% del contenedor principal */
+    max-height: 99%;
+    /* Altura máxima del 99% del contenedor principal */
+}
+
+
+/* Estilo personalizado para la clase .row */
+
+.custom-row {
+    display: flex;
+    /* Usa el modelo de caja flexible (flexbox) */
+    flex-wrap: wrap;
+    /* Envuelve elementos cuando no caben en el ancho de la pantalla */
+    margin: 0;
+    /* Margen cero */
+    padding: 0;
+    /* Relleno cero */
+    justify-content: center;
+    /* Alinea elementos al centro en el eje principal (horizontal) */
+    align-items: center;
+    /* Alinea elementos al centro en el eje transversal (vertical) */
+}
+
+
+/* Estilo personalizado para los elementos de la clase .col s12 dentro de .row */
+
+.custom-col {
+    width: 100%;
+    top: 20px;
+    /* Espaciado superior de 20 píxeles */
+    flex: 0 0 100%;
+    /* Establece cada columna para ocupar todo el ancho disponible */
+    max-width: 100%;
+    margin: 7px;
+    /* Establece el ancho máximo al 100% */
+}
+
+
+/* Estilo personalizado para el formulario con clase .customhbs-formhbs */
+
+.customhbs-formhbs {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    /* Ancho completo */
+    margin: 0 auto;
+    /* Margen cero en los lados y centrado horizontalmente */
+    text-align: center;
+    /* Alinea el texto al centro en el formulario */
+}
+
+
+/* Estilo personalizado para los campos de entrada con clase .customhbs-input.input-field */
+
+.customhbs-input.input-field {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    /* Margen inferior cero */
+    margin: 0 auto;
+    /* Margen cero en los lados y centrado horizontalmente */
+}
+
+
+/* Desactiva el efecto de resaltado en los campos de entrada de Materialize */
+
+.input-field input[type="text"]:focus+label,
+.input-field input[type="password"]:focus+label,
+.input-field input[type="email"]:focus+label,
+.input-field input[type="number"]:focus+label,
+.input-field textarea:focus+label {
+    color: #ffffff !important;
+    /* Restablece el color del texto de la etiqueta al color blanco */
+}
+
+
+/* Opcional: Desactiva la línea verde en la parte inferior de los campos de entrada */
+
+.input-field input[type="text"]:focus,
+.input-field input[type="password"]:focus,
+.input-field input[type="email"]:focus,
+.input-field input[type="number"]:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid #414141 !important;
+    /* Restablece el borde inferior al color deseado */
+    box-shadow: none !important;
+    /* Restablece la sombra al borde inferior al color deseado */
+}
+
+
+/* Etiqueta de campo de entrada */
+
+.input-field label {
+    display: flex;
+    align-items: center;
+    margin-inline: 10px;
+    color: #ffffff;
+}
+
+
+/* Ícono en la etiqueta del campo de entrada */
+
+.input-field label i {
+    margin-left: 10px;
+}
+
+
+/* Estilo personalizado para la clase .custom-col */
+
+.custom-col {
+    top: 20px;
+    /* Espaciado superior de 20 píxeles */
+    flex: 0 0 100%;
+    /* Establece cada columna para ocupar todo el ancho disponible */
+    max-width: 100%;
+    /* Establece el ancho máximo al 100% */
+    margin: 7px;
+    /* Margen de 7 píxeles entre columnas */
+}
+
+
+/* Estilo personalizado para la clase .customhbs-input */
+
+.customhbs-input {
+    width: 100%;
+    /* Ancho completo */
+    padding: 10px;
+    /* Relleno de 10 píxeles */
+    border: 0px solid #ccc;
+    /* Borde transparente */
+    border-radius: 25px;
+    /* Borde redondeado */
+    margin-bottom: 0;
+    /* Margen inferior cero */
+    text-align: center;
+    /* Alinea el texto al centro */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Transiciones suaves */
+    color: #ffffff;
+    /* Color del texto blanco */
+    font-family: Rounded Mplus 1c Bold;
+    /* Tipo de fuente */
+    font-size: 15px;
+    /* Tamaño de fuente de 15 píxeles */
+    font-style: normal;
+    /* Estilo de fuente normal */
+    font-weight: 700;
+    /* Peso de la fuente 700 (negrita) */
+    line-height: normal;
+    /* Altura de línea normal */
+}
+
+
+/* Estilo al enfocar el campo de entrada */
+
+.customhbs-input:focus {
+    border-color: #2196F3;
+    /* Cambia el color del borde al azul cuando está enfocado */
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+    /* Agrega una sombra al enfocar */
+    color: hsl(0, 0%, 100%);
+    /* Cambia el color del texto al blanco cuando está enfocado */
+    font-family: Rounded Mplus 1c Bold;
+    /* Tipo de fuente */
+    font-size: 15px;
+    /* Tamaño de fuente de 15 píxeles */
+    font-style: normal;
+    /* Estilo de fuente normal */
+    font-weight: 700;
+    /* Peso de la fuente 700 (negrita) */
+    line-height: normal;
+    /* Altura de línea normal */
+}
+
+
+/* Estilo al enfocar la etiqueta del campo de entrada */
+
+.customhbs-input:focus+label {
+    color: #2196F3;
+    /* Cambia el color del texto de la etiqueta al azul cuando está enfocado */
+    text-align: center;
+    /* Alinea el texto al centro al enfocar */
+    color: #ffffff;
+    /* Color del texto blanco */
+    font-family: Rounded Mplus 1c Bold;
+    /* Tipo de fuente */
+    font-size: 15px;
+    /* Tamaño de fuente de 15 píxeles */
+    font-style: normal;
+    /* Estilo de fuente normal */
+    font-weight: 700;
+    /* Peso de la fuente 700 (negrita) */
+    line-height: normal;
+    /* Altura de línea normal */
+}
+
+
+/* Limpieza de estilos de Materialize que pueden causar conflictos */
+
+
+/* Estilo para campos de entrada personalizados con clase .customhbs-input.input-field */
+
+.customhbs-input.input-field {
+    margin-bottom: 0;
+    /* Elimina el margen inferior */
+    margin: 0 auto;
+    /* Centra horizontalmente el elemento */
+    /* Restablece el margen inferior que agrega Materialize */
+}
+
+
+/* Estilo para la etiqueta que contiene un ícono */
+
+.label-icon {
+    display: flex;
+    /* Utiliza un contenedor flexible */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    width: 98%;
+    /* Ocupa todo el ancho del contenedor */
+    margin-right: 20px;
+    /* Agrega espacio a la derecha del texto */
+}
+
+
+/* Ícono en la etiqueta del campo de entrada */
+
+.input-field label i {
+    margin-left: 20px;
+    /* Ajusta el margen izquierdo del ícono */
+}
+
+
+/* Estilo del pie de página */
+
+.divup {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+}
+
+
+/* Estilos para los iconos en la sección "Recuérdame" y "Olvidé mi contraseña" */
+
+.remember-icon,
+.forgot-password-icon {
+    margin-right: 10px;
+    /* Ajusta el espacio entre el icono y el texto */
+}
+
+.divfooter {
+    width: 66%;
+    /* Establece el ancho del elemento */
+    height: 50px;
+    /* Establece la altura del elemento */
+    border-radius: 0px 0px 10px 10px;
+    /* Borde redondeado en la parte superior */
+    background: rgba(17, 17, 17, 0.685);
+    /* Fondo semitransparente con color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra difusa */
+    /* Define radios de borde específicos */
+    border: 0px solid #D9D9D9;
+    /* Establece un borde sólido con color específico */
+    display: flex;
+    align-items: center;
+    /* Usa el modelo de caja flexible (flexbox) */
+    justify-content: center;
+    /* Alinea elementos hijos al centro en el eje principal (horizontal) */
+    backdrop-filter: blur(10px);
+    /* Aplica un desenfoque al fondo del contenedor */
+    /* top: calc(70vh + 56px); */
+    /* Calcula la posición desde la parte superior del viewport */
+    backdrop-filter: blur(10px);
+    /* Aplica un desenfoque al fondo del elemento */
+}
+
+
+/* Estilo para el botón */
+
+.botonhbs {
+    width: 20vh;
+    /* Establece el ancho del botón */
+    height: 40px;
+    /* Establece la altura del botón */
+    border-radius: 25px;
+    /* Establece radios de borde específicos para una apariencia redonda */
+    border: 0px solid #d9d9d9;
+    /* Establece un borde sólido con color específico */
+    background: #313131;
+    /* Establece un color de fondo */
+    color: #ffffff;
+    /* Establece el color del texto */
+    text-align: center;
+    /* Centra el texto horizontalmente en el botón */
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    /* Agrega una sombra al texto */
+    font-family: "Rounded Mplus 1c Bold", sans-serif;
+    /* Establece la fuente del texto */
+    font-size: 15px;
+    /* Establece el tamaño de la fuente */
+    font-weight: 500;
+    /* Establece el grosor de la fuente */
+    display: flex;
+    /* Utiliza un contenedor flexible */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    /* Agrega transiciones suaves */
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Agrega una sombra interna al botón */
+    letter-spacing: 1px;
+    /* Establece el espaciado entre caracteres */
+}
+
+
+/* Estilo para el botón al pasar el mouse sobre él */
+
+.botonhbs:hover {
+    background: #f1f1f1;
+    /* Cambia el color de fondo al pasar el mouse */
+    color: #333;
+    /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05);
+    /* Aplica un ligero efecto de escala al pasar el mouse */
+}
+
+.checked {
+    /* Estilos cuando el checkbox está marcado */
+    color: #2196F3;
+    border: 2px solid red;
+    /* Cambia el color a azul */
+    font-weight: bold;
+    /* Puedes ajustar otros estilos según tus preferencias */
+}
+
+.remember-checkbox {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.remember-checkbox:hover {
+    cursor: pointer;
+}
+
+.remember-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .custom-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    form.customhbs-formhbs {
+        justify-content: center;
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        /* Centra horizontalmente el formulario */
+        padding: 0;
+    }
+    .customhbs-formhbs .input-field.label-icon {
+        justify-content: center;
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .customhbs-formhbs .input-field label {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+    .customhbs-formhbs .input-field label i {
+        width: auto;
+        /* Cambiado de 90% a auto */
+        margin-left: 100px !important;
+        /* Ajusta el margen izquierdo */
+        margin-right: 100px !important;
+        /* Ajusta el margen derecho */
+    }
+    .divup {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        /* Ajuste para que el ancho sea del 90% del contenedor principal */
+        margin: 0 auto;
+        /* Centra horizontalmente el divup */
+    }
+}
