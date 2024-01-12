@@ -1,5 +1,1 @@
-
-git add .   
-git add .
-git commit -m
-"Añadido datos." 
+# Aquí escribes el contenido del archivo, luego presiona Ctrl + D para guardar.
